@@ -11,11 +11,11 @@ services:
     ports: 
      - 1883:1883 
     environment:
-      - RUN=LOGGER 
-      # - RUN=PLAYBACK
+      # - RUN=LOGGER 
+      - RUN=PLAYBACK
       - DB_NAME=MQTT-LOG
       - MQTT_TOPICS=CROWSNEST/#,TEST/#
-      - MQTT_PLAYBACK_DB=2023-02-22_MQTT-LOG.db
+      - MQTT_PLAYBACK_DB=2023-04-18_MQTT-LOG.db
       - MQTT_PLAYBACK_SPEED=1
 
 volumes:

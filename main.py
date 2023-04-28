@@ -8,11 +8,11 @@ import warnings
 
 # Reading config from environment variables
 env = Env()
-RUN = env("RUN", "LOGGER")
+RUN = env("RUN", "PLAYBACK")
 DB_NAME = env("DB_NAME", "MQTT-LOG")
 MQTT_TOPICS = env("MQTT_TOPICS", "#")
-MQTT_PLAYBACK_DB = env("MQTT_PLAYBACK_DB", )
-MQTT_PLAYBACK_SPEED = env("MQTT_PLAYBACK_SPEED", 1)
+MQTT_PLAYBACK_DB = env("MQTT_PLAYBACK_DB", "2023-04-18_MQTT-LOG-EDITED-RAW.db" )
+MQTT_PLAYBACK_SPEED = env("MQTT_PLAYBACK_SPEED", 2)
 
 # Setup logger
 LOG_LEVEL = env.log_level("LOG_LEVEL", logging.WARNING)
@@ -62,7 +62,7 @@ def start_playback():
     )
 
     # Start playback at 2x speed (twice as fast)
-    playback.play(speed=1)
+    playback.play(speed=MQTT_PLAYBACK_SPEED)
     
 
 

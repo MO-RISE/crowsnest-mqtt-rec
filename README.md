@@ -30,6 +30,15 @@ docker-compose -f .\docker-compose.logger.yml up --build
 
 ```
 
+## ToDo:
+
+- Add MQTT control input
+- Select playback start time
+- Select playback speed
+- Pause / Play
+- Send actual time to fronted
+- Filter replay messages
+
 [Based on Black-Hydon MQTT Logger](https://github.com/Blake-Haydon/mqtt-logger)
 
 ## License
